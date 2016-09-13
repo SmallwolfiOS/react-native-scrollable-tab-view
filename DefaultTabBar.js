@@ -47,7 +47,7 @@ const DefaultTabBar = React.createClass({
       onPress={() => onPressHandler(page)}
     >
       <View style={[styles.tab, this.props.tabStyle, ]}>
-        <Text style={[{color: textColor, fontWeight, }, textStyle, ]}>
+        <Text style={[{color: textColor, fontWeight, }, textStyle, {marginTop:7,fontSize:15}]}>
           {name}
         </Text>
       </View>
@@ -60,9 +60,9 @@ const DefaultTabBar = React.createClass({
     const tabUnderlineStyle = {
       position: 'absolute',
       width: containerWidth / numberOfTabs,
-      height: 4,
-      backgroundColor: 'navy',
-      bottom: 0,
+      height: 2,
+      backgroundColor: '#5bb7ff',
+      bottom: 54,
     };
 
     const left = this.props.scrollValue.interpolate({
@@ -89,10 +89,10 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   tabs: {
-    height: 50,
+    height: 55,
     flexDirection: 'row',
     justifyContent: 'space-around',
-    borderWidth: 1,
+    // borderWidth: 1,
     borderTopWidth: 0,
     borderLeftWidth: 0,
     borderRightWidth: 0,
